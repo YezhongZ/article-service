@@ -8,6 +8,7 @@ spring:
       name: admin
       password: 1234554321
   jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
     database: mysql
     show-sql: true
     generate-ddl: true
