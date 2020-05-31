@@ -17,6 +17,8 @@ eureka:
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
     prefer-ip-address: true
   client:
+    #https://stackoverflow.com/questions/53171039/load-balancer-does-not-have-available-server-for-client-how-to-solve%20*/
+    fetchRegistry: true
     serviceUrl:
       defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}/eureka/
 zuul:
